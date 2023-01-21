@@ -535,7 +535,7 @@ static void RunSystemCommand(const std::string& command)
 
 void DolphinApp::CheckUpdate()
 {
-  std::string url = "https://projectplusgame.com/update.json";
+  std::string url = "https://glitchery.jp/update.json";
   Common::HttpRequest req{ std::chrono::seconds{10} };
   auto resp = req.Get(url);
   if (!resp)
@@ -554,7 +554,7 @@ void DolphinApp::CheckUpdate()
   }
   picojson::object obj = json.get<picojson::object>();
 
-  if (obj["hash"].get<std::string>() == Common::scm_rev_git_str.c_str() && obj["version"].get<std::string>() == Common::scm_desc_str.c_str())
+  if (obj["hash"].get<std::string>() == Common::scm_rev_git_str.c_str())
   {
     INFO_LOG(COMMON, "Update status: we are up to date.");
     updateAvailable = false;

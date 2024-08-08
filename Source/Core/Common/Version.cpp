@@ -8,7 +8,7 @@
 
 namespace Common
 {
-#define VERSION_STR "FBM v5.0.5b"
+#define VERSION_STR "FBM v5.1.0"
 #ifdef _DEBUG
 #define BUILD_TYPE_STR "Debug "
 #elif defined DEBUGFAST

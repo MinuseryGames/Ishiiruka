@@ -535,7 +535,7 @@ static void RunSystemCommand(const std::string& command)
 
 void DolphinApp::CheckUpdate()
 {
-  std::string url = "https://glitchery.jp/update.json";
+  std::string url = "https://forums.brawlminus.net/update.json";
   Common::HttpRequest req{ std::chrono::seconds{10} };
   auto resp = req.Get(url);
   if (!resp)
